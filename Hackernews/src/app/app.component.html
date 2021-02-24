@@ -1,0 +1,19 @@
+<h2>Today's article</h2>
+<hr>
+<div *ngFor="let art of articles">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+</div>
+<hr>
+<input (click)="updateArticle()" type="button" value="Update">
+<button (click)="addArticle()">Add</button>
+{{likes}}<button (click)="likeThis()">Like</button>
+<div *ngFor="let art of articles">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+  <likes></likes>
+</div>
+<textarea [(ngModel)]="article.title" cols="70"></textarea>
+<textarea [(ngModel)]="article.url" cols="70"></textarea>
+
+
+
+

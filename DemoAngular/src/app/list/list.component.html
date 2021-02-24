@@ -1,0 +1,47 @@
+<h2 style="color: orangered; text-align: center" class="col col-12">Trang Chủ</h2>
+<div class="container-xl">
+  <div class="text-right mb-3">
+    <a [routerLink]="['create']" class="btn btn-outline-info">Create product</a>
+  </div>
+  <table class="table table-light">
+    <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Description</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of listCustomer">
+      <td>{{customer.id }}</td>
+      <td>{{customer.lastName}}</td>
+      <td>{{customer.firstName }}</td>
+      <td>{{customer.description }}</td>
+      <td>
+        <button class="btn btn-danger" [routerLink]="['/detail/', customer.id]">Detail</button>
+      </td>
+      <td>
+        <button [routerLink]="['/edit/', customer.id]" class="btn btn-danger">Update</button>
+      </td>
+      <td>
+        <button [routerLink]="['/delete/',customer.id]" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

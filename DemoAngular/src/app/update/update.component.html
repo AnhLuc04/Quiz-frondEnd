@@ -1,0 +1,31 @@
+<h2 style="color: orangered; text-align: center" class="col col-12">Update</h2>
+<h2>Update User</h2>
+<a [routerLink]="['/']" class="btn btn-outline-info">Back</a>
+<form [formGroup]="customerForm" (ngSubmit)="updateUser()">
+  <table class="table table-light">
+    <tr>
+      <td>
+        Tên Sách:
+      </td>
+      <td>
+        <input type="text" formControlName="lastName" id="lastName">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Tác Gỉa:
+      </td>
+      <td><input type="text" formControlName="firstName" id="firstName"></td>
+    </tr>
+    <tr>
+      <td>Mô Tả:</td>
+      <td>
+        <input type="text" formControlName="description" id="description">
+      </td>
+    </tr>
+    <tr>
+      <button type="submit">Update</button>
+    </tr>
+  </table>
+</form>
+
