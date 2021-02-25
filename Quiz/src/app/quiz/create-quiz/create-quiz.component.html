@@ -1,1 +1,106 @@
-<p>create-quiz works!</p>
+<section class="blog-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-post single-post">
+          <div class="comments">
+            <h5><big>Thêm bài thi : </big></h5>
+            <form class="comment-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Tên bài thi:</h5>
+                  <input type="text" placeholder="Bài thi">
+                </div>
+                <div class="col-md-6">
+                  <h5>Mô tả:</h5>
+                  <input type="text" placeholder="Mô tả">
+                </div>
+                <div class="col-md-6">
+                  <h5> Danh mục :</h5>
+                  <select
+                    [(ngModel)]="assignedCategory.id"
+                    name="category"
+                    class="form-control m-input">
+                    <option *ngFor="let category of categories;" [value]="category.id"
+                            [selected]="category.id === 1">{{category.name}}</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <h5>Thêm câu hỏi vào bài thi:</h5>
+                  <input type="text" placeholder="Mã câu hỏi">
+                  <button class="site-btn">Tìm</button>
+                </div>
+                <div class="col-md-6">
+                  <h5>Danh sách các câu hỏi tìm thấy:</h5>
+                  <div>
+                    <ul class="main-menu">
+                      <li><a>#</a></li>
+                      <li><a>Mã câu hỏi</a></li>
+                      <li><a>Cấp độ câu hỏi</a></li>
+                      <li><a>Loại câu hỏi</a></li>
+                      <li><a>Ngày tạo</a></li>
+                      <li><a>Ngày cập nhập</a></li>
+                      <li><a class="btn btn-outline-danger m-1"></a></li>
+                    </ul>
+                  </div>
+                  <div *ngFor="let question of searchPool" class="col-md-6">
+                    <ul class="main-menu">
+                      <li><a>{{question.id}}</a></li>
+                      <li><a>{{question.code}}</a></li>
+                      <li><a>{{question.type}}</a></li>
+                      <li><a>{{question.level}}</a></li>
+                      <li><a>12-12-2020</a></li>
+                      <li><a>12-12-2020</a></li>
+                      <li><a class="btn btn-outline-danger m-1"></a></li>
+                      <li>
+                        <button class="site-btn" (click)="addSearchQuestion(question.code)">Thêm</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Danh sách câu hỏi trong bài thi:</h5>
+                    <div>
+                      <ul class="main-menu">
+                        <li><a>#</a></li>
+                        <li><a>Mã câu hỏi</a></li>
+                        <li><a>Cấp độ câu hỏi</a></li>
+                        <li><a>Loại câu hỏi</a></li>
+                        <li><a>Ngày tạo</a></li>
+                        <li><a>Ngày cập nhập</a></li>
+                        <li><a class="btn btn-outline-danger m-1"></a></li>
+                      </ul>
+                    </div>
+                    <div *ngFor="let question of questionPool" class="col-md-6">
+                      <ul class="main-menu">
+                        <li><a>{{question.id}}</a></li>
+                        <li><a>{{question.code}}</a></li>
+                        <li><a>{{question.type}}</a></li>
+                        <li><a>{{question.level}}</a></li>
+                        <li><a>12-12-2020</a></li>
+                        <li><a>12-12-2020</a></li>
+                        <li><a class="btn btn-outline-danger m-1"></a></li>
+                        <li>
+                          <button class="site-btn" (click)="removeQuestion(question.code)">xóa</button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div id="button-bar-container" class="col-md-12">
+                      <div id="button-bar" class="col-md-12">
+                        <ul>
+                          <li>
+                            <button class="site-btn" (click)="create()">Thêm bài thi</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
