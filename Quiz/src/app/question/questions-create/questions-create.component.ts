@@ -80,6 +80,7 @@ export class QuestionsCreateComponent implements OnInit {
   createQuestionAnswer() {
     this.questionAnswerS.push(this.questionAnswer);
     console.log(this.questionAnswerS);
+    alert('Thành công');
   }
 
   // tslint:disable-next-line:typedef
@@ -100,3 +101,4 @@ export class QuestionsCreateComponent implements OnInit {
     }
   }
 }
+

@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {QuizService} from '../../service/quiz/Quiz.service';
+
 import {Router} from '@angular/router';
 import {Quiz} from '../../model/quiz/quiz.model';
+// @ts-ignore
+import {QuizService} from '../../service/quiz/quiz.service';
 
 @Component({
   selector: 'app-view-quiz',

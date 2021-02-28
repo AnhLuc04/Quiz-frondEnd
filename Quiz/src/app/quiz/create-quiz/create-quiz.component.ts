@@ -5,7 +5,7 @@ import {Question} from '../../model/question/Question';
 import {HttpClient} from '@angular/common/http';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {QuizService} from '../../service/quiz/Quiz.service';
+import {QuizService} from '../../service/quiz/quiz.service';
 import {QuestionService} from '../../service/question/QuestionService';
 import {CategoryService} from '../../service/category/CategoryService';
 import {QuestionSearch} from '../../model/question-search/QuestionSearch';
